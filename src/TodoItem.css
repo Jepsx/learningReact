@@ -46,6 +46,10 @@ li > .span--b{
     margin-inline-end: 10px;
 }
 
+li > .span--b:hover{
+    background-image: url('./red-x-icon.svg');
+}
+
 li > .checkIcon{
     background-image: url('./check.svg');
 }
