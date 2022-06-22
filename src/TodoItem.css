@@ -4,15 +4,15 @@ li{
     flex-direction: column;
     font-size: 1.6rem;
     /* align-items: flex-start; */
-    margin-block-start: 5px;
-    margin-block-end: 5px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
     color: #61BAB2;
 }
 
 li > p{
     font-size: 2rem;
     height: auto;
-    margin-block-start: 5px;
+    margin-block-start: 10px;
     margin-block-end: 5px;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
@@ -20,11 +20,18 @@ li > p{
 
 li > .span--a{
     align-self: flex-start;
+    width: 40px;
+    height: 40px;
+    background-image: url('./circle.svg');
+
     margin-inline-start: 10px;
     
 }
 
 li > .span--b{
     align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    background-image: url('./x-icon.svg');
     margin-inline-end: 10px;
 }
