@@ -1,0 +1,19 @@
+.TodoCounter--h1{
+    height: 49px;
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-inline-start: 20px;
+    margin-block-start: 23px;
+    color: #D1FFFA;
+
+}
+
+
+.TodoCounter--h2{
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-inline-start: 20px;
+  margin-block-end: 24px;
+  color: #F5F5F5;
+}

@@ -1,0 +1,30 @@
+li{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 1.6rem;
+    /* align-items: flex-start; */
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    color: #61BAB2;
+}
+
+li > p{
+    font-size: 2rem;
+    height: auto;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+
+li > .span--a{
+    align-self: flex-start;
+    margin-inline-start: 10px;
+    
+}
+
+li > .span--b{
+    align-self: flex-end;
+    margin-inline-end: 10px;
+}

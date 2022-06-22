@@ -1,0 +1,26 @@
+input{
+    width: auto;
+    height: 35px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    margin-block-end: 10px;
+    border: 2px solid #8DB0AC;
+    background-color: #F5F5F5;
+    ;
+    color: #8DB0AC;
+    border-radius:  6px;
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-button{
+    min-width: 73px;
+    height: 35px;
+    align-self: flex-end;
+    margin-inline-end: 20px;
+    margin-block-end: 15px;
+    color:  #8DB0AC;
+    background-color: #D1FFFA;
+    font-size: 1.4rem;
+    border: none;
+}

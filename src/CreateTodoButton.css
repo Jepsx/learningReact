@@ -1,0 +1,13 @@
+button{
+    min-width: 150px;
+    height: 35px;
+    background-color: #D1FFFA;
+    margin-block-end: 15px;
+    margin-inline-end: 20px;
+    border: 2px solid #8DB0AC;
+    color: #8DB0AC;
+    border-radius: 5px;
+    align-self: flex-end;
+    font-family: 'Nunito';
+    font-size: 1.4rem;
+}
