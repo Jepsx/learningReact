@@ -27,7 +27,7 @@ li > .span--a{
     align-self: flex-start;
     width: 40px;
     height: 40px;
-    background-image: url('./circle.svg');
+    background-image: url('../../public/assets/icons/circle.svg');
     background-position: center;
     /* background-size: cover; */
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@ li > .span--b{
     align-self: flex-end;
     width: 40px;
     height: 40px;
-    background-image: url('./x-icon.svg');
+    background-image: url('../../public/assets/icons/x-icon.svg');
     background-position: center;
     /* background-size: cover; */
     background-repeat: no-repeat;
@@ -47,11 +47,11 @@ li > .span--b{
 }
 
 li > .span--b:hover{
-    background-image: url('./red-x-icon.svg');
+    background-image: url('../../public/assets/icons/red-x-icon.svg');
 }
 
 li > .checkIcon{
-    background-image: url('./check.svg');
+    background-image: url('../../public/assets/icons/check.svg');
 }
 
 .task-completed{
