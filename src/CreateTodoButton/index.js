@@ -5,8 +5,6 @@ function CreateTodoButton(props){
 
     const onClickButton = ()=>{
         props.setOpenModal(prevState => !prevState);
-        const btn = document.querySelector('.create-button');
-        btn.classList.toggle('over')
     }
 
     return(
