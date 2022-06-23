@@ -7,6 +7,7 @@ import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
 import { Modal } from "../Modal";
 import './App.css';
+import { TodoForm } from "../TodoForm";
 
 function AppUI(){
 
@@ -43,12 +44,11 @@ function AppUI(){
                 
       {!!openModal && (
       <Modal>
-        <p>sdasdas</p>
+        <TodoForm/>
       </Modal>)}
 
       <CreateTodoButton 
         setOpenModal={setOpenModal}
-        openModal={openModal}
       />
       <footer>With &#129505; by Jepsx</footer>
     </React.Fragment>

@@ -14,6 +14,15 @@ function TodoProvider(props){
     const totalTodos = todos.length;
   
   
+    const addTodo =(text)=>{
+     
+      const newTodos=[...todos];
+      newTodos.push({
+        Completed:false,
+        text:text,
+      })
+      saveTodos(newTodos);
+    } 
     const completeTodo =(text)=>{
       const todoIndex = todos.findIndex(todo=>todo.text === text);
       const newTodos=[...todos];
@@ -40,6 +49,7 @@ function TodoProvider(props){
             setSearchValue,
             completeTodo,
             deleteTodo,
+            addTodo,
         }}>
            {props.children} 
         </TodoContext.Provider>
