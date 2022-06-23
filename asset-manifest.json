@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/learningReact/static/css/main.7b6d6176.css",
+    "main.js": "/learningReact/static/js/main.777b7d3f.js",
+    "static/media/red-x-icon.svg": "/learningReact/static/media/red-x-icon.75a26818e2884c7acb64.svg",
+    "static/media/x-icon.svg": "/learningReact/static/media/x-icon.ac4f2916a720426c1b3a.svg",
+    "index.html": "/learningReact/index.html",
+    "static/media/check.svg": "/learningReact/static/media/check.621a74ac5f209e5f02d5.svg",
+    "static/media/circle.svg": "/learningReact/static/media/circle.60f29805cff970f06eb8.svg",
+    "main.7b6d6176.css.map": "/learningReact/static/css/main.7b6d6176.css.map",
+    "main.777b7d3f.js.map": "/learningReact/static/js/main.777b7d3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b6d6176.css",
+    "static/js/main.777b7d3f.js"
+  ]
+}
