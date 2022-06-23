@@ -22,7 +22,7 @@ function TodoForm(){
         addTodo(newTodoValue);
         setOpenModal(false);
     }
-
+ 
 
     return (
         <form className="form-container"  onSubmit={onSubmit}>

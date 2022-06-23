@@ -1,0 +1,14 @@
+#message{
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-block-start: 35px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    border-radius: 5px;
+    color: #61BAB2;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .25);
+}

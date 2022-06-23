@@ -4,10 +4,13 @@ import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { CreateTodoMessage } from "../CreateTodoMessage";
 import { TodoContext } from "../TodoContext";
 import { Modal } from "../Modal";
 import './App.css';
 import { TodoForm } from "../TodoForm";
+import {Loading} from '../Loading';
+import {Error} from '../Error'
 
 function AppUI(){
 
@@ -31,9 +34,9 @@ function AppUI(){
       </div>
      
       <TodoList>
-          {error && <p>Desespérate, hubo un error...</p>}
-          {loading && <p>Estamos cargando, no desesperes...</p>}
-          {(!loading && !todos.length) && <p>!Crea tu primer to-do!</p>}
+          {error && <Error /> }
+          {loading && <Loading />}
+          {(!loading && !todos.length) && <CreateTodoMessage/>}
       
           {
             todos.filter((todo)=>{
