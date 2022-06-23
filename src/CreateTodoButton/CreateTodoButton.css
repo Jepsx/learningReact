@@ -1,4 +1,4 @@
-button{
+.create-button{
     min-width: 150px;
     height: 35px;
     background-color: #D1FFFA;
@@ -10,4 +10,10 @@ button{
     align-self: flex-end;
     font-family: 'Nunito';
     font-size: 1.4rem;
+    position: fixed;
+    bottom: 40px;
+}
+
+.over{
+    z-index: 3;
 }

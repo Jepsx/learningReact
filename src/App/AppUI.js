@@ -5,6 +5,7 @@ import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
+import { Modal } from "../Modal";
 import './App.css';
 
 function AppUI(){
@@ -15,7 +16,9 @@ function AppUI(){
         todos,
         searchValue,
         completeTodo,
-        deleteTodo,                
+        deleteTodo,
+        openModal,
+        setOpenModal,            
     } = React.useContext(TodoContext);
 
     return(
@@ -26,21 +29,27 @@ function AppUI(){
       <TodoSearch/>
       </div>
      
-        <TodoList>
-            {error && <p>Desespérate, hubo un error...</p>}
-            {loading && <p>Estamos cargando, no desesperes...</p>}
-            {(!loading && !todos.length) && <p>!Crea tu primer to-do!</p>}
-        
-            {
-              todos.filter((todo)=>{
-                return todo.text.toLowerCase().match(searchValue.toLowerCase());
-              }).map(todo => <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>)
-            } 
-        </TodoList>
+      <TodoList>
+          {error && <p>Desespérate, hubo un error...</p>}
+          {loading && <p>Estamos cargando, no desesperes...</p>}
+          {(!loading && !todos.length) && <p>!Crea tu primer to-do!</p>}
+      
+          {
+            todos.filter((todo)=>{
+              return todo.text.toLowerCase().match(searchValue.toLowerCase());
+            }).map(todo => <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>)
+          } 
+      </TodoList>
                 
-    
+      {!!openModal && (
+      <Modal>
+        <p>sdasdas</p>
+      </Modal>)}
 
-      <CreateTodoButton/>
+      <CreateTodoButton 
+        setOpenModal={setOpenModal}
+        openModal={openModal}
+      />
       <footer>With &#129505; by Jepsx</footer>
     </React.Fragment>
     );

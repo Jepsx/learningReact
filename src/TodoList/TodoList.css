@@ -11,3 +11,6 @@ ul{
     margin-block-start: 25px;
     margin-block-end: 25px;
 } 
+section{
+    height: 62.55vh;
+}
