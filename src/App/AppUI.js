@@ -37,7 +37,7 @@ function AppUI(){
           {error && <Error /> }
           {loading && <Loading />}
           {(!loading && !todos.length) && <CreateTodoMessage/>}
-      
+    
           {
             todos.filter((todo)=>{
               return todo.text.toLowerCase().match(searchValue.toLowerCase());

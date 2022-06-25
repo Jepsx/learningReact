@@ -1,0 +1,30 @@
+.Icon{
+
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+
+.circle{
+    align-self: flex-start;
+    margin-inline-start: 10px;
+    background-image: url('../../public/assets/icons/circle.svg');
+}
+
+.check{
+    align-self: flex-start;
+    margin-inline-start: 10px;
+    background-image: url('../../public/assets/icons/check.svg');
+}
+
+.delete{
+    align-self: flex-end;
+    margin-inline-end: 10px;
+    background-image: url('../../public/assets/icons/x-icon.svg');
+}
+
+.delete:hover{
+    background-image: url('../../public/assets/icons/red-x-icon.svg');
+}

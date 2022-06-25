@@ -4,7 +4,6 @@ li{
     background-color: #fff;
     flex-direction: column;
     font-size: 1.6rem;
-    /* align-items: flex-start; */
     margin-block-start: 10px;
     margin-block-end: 10px;
     padding-block-start: 5px;
@@ -21,37 +20,6 @@ li > p{
     margin-block-end: 5px;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-}
-
-li > .span--a{
-    align-self: flex-start;
-    width: 40px;
-    height: 40px;
-    background-image: url('../../public/assets/icons/circle.svg');
-    background-position: center;
-    /* background-size: cover; */
-    background-repeat: no-repeat;
-    margin-inline-start: 10px;
-    
-}
-
-li > .span--b{
-    align-self: flex-end;
-    width: 40px;
-    height: 40px;
-    background-image: url('../../public/assets/icons/x-icon.svg');
-    background-position: center;
-    /* background-size: cover; */
-    background-repeat: no-repeat;
-    margin-inline-end: 10px;
-}
-
-li > .span--b:hover{
-    background-image: url('../../public/assets/icons/red-x-icon.svg');
-}
-
-li > .checkIcon{
-    background-image: url('../../public/assets/icons/check.svg');
 }
 
 .task-completed{
