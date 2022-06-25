@@ -26,7 +26,7 @@ function TodoForm(){
 
     return (
         <form className="form-container"  onSubmit={onSubmit}>
-            <label className="form-container--label" for='area'>
+            <label className="form-container--label" htmlFor='area'>
                 <h2>Create your to-do.</h2>
                 <textarea id="area"
                  value={newTodoValue}
