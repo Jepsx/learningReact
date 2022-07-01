@@ -42,8 +42,19 @@ return(
         setSearchValue={setSearchValue}
       />
     </TodoHeader>
-   
-    <TodoList>
+    <TodoList
+      error={error}
+      loading={loading}
+      todos={todos}
+      searchValue={searchValue}
+      onError={()=><Error/>}
+      onLoading={()=><Loading/>}
+      onEmpty={()=><CreateTodoMessage/>}
+      render={todo =>(
+        <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>
+      )}
+    />
+    {/* <TodoList>
         {error && <Error /> }
         {loading && <Loading />}
         {(!loading && !todos.length) && <CreateTodoMessage/>}
@@ -53,7 +64,7 @@ return(
             return todo.text.toLowerCase().match(searchValue.toLowerCase());
           }).map(todo => <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>)
         } 
-    </TodoList>
+    </TodoList> */}
               
     {!!openModal && (
     <Modal>
