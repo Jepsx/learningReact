@@ -2,7 +2,7 @@ import React from "react";
 import './TodoCounter.css'
 
 function TodoCounter({totalTodos,completedTodos,loading}){
-
+    console.log(loading);
     return (
         <React.Fragment>
 
