@@ -8,11 +8,13 @@ function TodoList(props){
         <ul>
         {props.error && props.onError()}
         {props.loading && props.onLoading()}
-        {(!props.loading && !props.todos.length) && props.onEmpty()}
-
+        {(!props.loading && !props.totalTodos) && props.onEmpty()}
+        {(!!props.totalTodos && !props.todos.filter((todo)=>{
+            return todo.text.toLowerCase().match(props.searchValue.toLowerCase());
+          }).length) && props.onSearch(props.searchValue)}
         {props.todos.filter((todo)=>{
             return todo.text.toLowerCase().match(props.searchValue.toLowerCase());
-          }).map(props.render)
+          }).map(props.children||props.render)
           }
 
         </ul>

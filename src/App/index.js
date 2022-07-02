@@ -7,6 +7,7 @@ import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { CreateTodoMessage } from "../CreateTodoMessage";
+import {NoneResultInSearch} from '../NoneResultInSearch';
 import { Modal } from "../Modal";
 import './App.css';
 import { TodoForm } from "../TodoForm";
@@ -46,25 +47,21 @@ return(
       error={error}
       loading={loading}
       todos={todos}
+      totalTodos={totalTodos}
       searchValue={searchValue}
       onError={()=><Error/>}
       onLoading={()=><Loading/>}
       onEmpty={()=><CreateTodoMessage/>}
-      render={todo =>(
-        <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>
-      )}
-    />
-    {/* <TodoList>
-        {error && <Error /> }
-        {loading && <Loading />}
-        {(!loading && !todos.length) && <CreateTodoMessage/>}
-  
+      onSearch={(searchText)=><NoneResultInSearch searchText={searchText}/>}
+      // render={todo =>(
+      //   <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>
+      // )}/
+    >
+    
         {
-          todos.filter((todo)=>{
-            return todo.text.toLowerCase().match(searchValue.toLowerCase());
-          }).map(todo => <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>)
+          todo => <TodoItem key={todo.text} text={todo.text} Completed={todo.Completed} onComplete={()=>completeTodo(todo.text)} onDelete={()=>deleteTodo(todo.text)}/>
         } 
-    </TodoList> */}
+    </TodoList>
               
     {!!openModal && (
     <Modal>
