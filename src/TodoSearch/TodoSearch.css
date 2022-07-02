@@ -13,6 +13,10 @@ input{
     font-family: 'Nunito', sans-serif;
 }
 
+input:disabled{
+    opacity: 25%;
+}
+
 .search-button{
     min-width: 73px;
     height: 35px;

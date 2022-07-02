@@ -17,3 +17,7 @@
   margin-block-end: 24px;
   color: #F5F5F5;
 }
+
+.TodoCounter--h1__loading, .TodoCounter--h2__loading{
+  opacity: 25%;
+}
