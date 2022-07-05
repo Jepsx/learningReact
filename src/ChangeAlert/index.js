@@ -1,8 +1,10 @@
 import React from "react";
 import './ChangeAlert.css'
-import { withStorageListener } from "./withStorageListener";
+import { useStorageListener } from "./useStorageListener";
 
-function ChangeAlert({show,toggleShow,setOpenModal}){
+function ChangeAlert({sincronize,setOpenModal}){
+    
+    const {show,toggleShow} = useStorageListener(sincronize,setOpenModal)
     if(show){
         return (
             <div id='refresh-div'>
@@ -21,6 +23,4 @@ function ChangeAlert({show,toggleShow,setOpenModal}){
    
 }
 
-const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert)
-
-export {ChangeAlertWithStorageListener}
+export {ChangeAlert}

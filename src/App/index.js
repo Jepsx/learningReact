@@ -10,7 +10,7 @@ import { CreateTodoMessage } from "../CreateTodoMessage";
 import {NoneResultInSearch} from '../NoneResultInSearch';
 import { Modal } from "../Modal";
 import './App.css';
-import { ChangeAlertWithStorageListener } from "../ChangeAlert";
+import { ChangeAlert } from "../ChangeAlert";
 import { TodoForm } from "../TodoForm";
 import {Loading} from '../Loading';
 import {Error} from '../Error'
@@ -83,7 +83,7 @@ return(
 
       </Modal>
     )}
-    <ChangeAlertWithStorageListener sincronize={sincronizeTodos}
+    <ChangeAlert sincronize={sincronizeTodos}
     setOpenModal={setOpenModal}/>
     <CreateTodoButton 
       setOpenModal={setOpenModal}
