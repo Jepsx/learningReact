@@ -5,6 +5,7 @@ function CreateTodoButton(props){
 
     const onClickButton = ()=>{
         props.setOpenModal(prevState => !prevState);
+        props.setIsANewTodo(true);
     }
 
     return(

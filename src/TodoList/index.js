@@ -12,7 +12,7 @@ function TodoList(props){
         {(!!props.totalTodos && !props.todos.filter((todo)=>{
             return todo.text.toLowerCase().match(props.searchValue.toLowerCase());
           }).length) && props.onSearch(props.searchValue)}
-        {props.todos.filter((todo)=>{
+        {!props.loading && props.todos.filter((todo)=>{
             return todo.text.toLowerCase().match(props.searchValue.toLowerCase());
           }).map(props.children||props.render)
           }

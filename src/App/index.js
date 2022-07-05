@@ -10,6 +10,7 @@ import { CreateTodoMessage } from "../CreateTodoMessage";
 import {NoneResultInSearch} from '../NoneResultInSearch';
 import { Modal } from "../Modal";
 import './App.css';
+import { ChangeAlertWithStorageListener } from "../ChangeAlert";
 import { TodoForm } from "../TodoForm";
 import {Loading} from '../Loading';
 import {Error} from '../Error'
@@ -28,7 +29,10 @@ function App() {
     totalTodos, 
     completedTodos,
     setSearchValue,
-    addTodo           
+    addTodo,
+    sincronizeTodos,
+    isANewTodo,
+    setIsANewTodo          
 } = useTodos();
 
 return(
@@ -63,20 +67,31 @@ return(
         } 
     </TodoList>
               
-    {!!openModal && (
+    {!!openModal && !!isANewTodo &&(
     <Modal>
       <TodoForm
         addTodo={addTodo}
         setOpenModal={setOpenModal}
+        setIsANewTodo={setIsANewTodo}
       >
 
       </TodoForm>
     </Modal>)}
 
+    {!!openModal && !isANewTodo &&(
+      <Modal>
+
+      </Modal>
+    )}
+    <ChangeAlertWithStorageListener sincronize={sincronizeTodos}
+    setOpenModal={setOpenModal}/>
     <CreateTodoButton 
       setOpenModal={setOpenModal}
+      setIsANewTodo={setIsANewTodo}
     />
     <footer>With &#129505; by Jepsx</footer>
+
+
   </React.Fragment>
   );
 
