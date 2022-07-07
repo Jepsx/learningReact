@@ -17,24 +17,23 @@ import {Error} from '../Error'
 
 function App() {
 
-  const {
-    error,
+  const {states,setters} = useTodos();
+  const{error,
     loading,
-    todos,
+    totalTodos,
+    completedTodos,
     searchValue,
+    todos,
+    openModal,
+    isANewTodo}=states;
+const{
+    setOpenModal,
+    setSearchValue,
     completeTodo,
     deleteTodo,
-    openModal,
-    setOpenModal,
-    totalTodos, 
-    completedTodos,
-    setSearchValue,
     addTodo,
     sincronizeTodos,
-    isANewTodo,
-    setIsANewTodo          
-} = useTodos();
-
+    setIsANewTodo}=setters;
 return(
   <React.Fragment>
     <TodoHeader loading={loading} >
